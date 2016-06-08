@@ -1,0 +1,54 @@
+/**
+ * Main css fairy-talk
+ *
+ */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.fullscreen {
+    /*min-height: 100vh;*/
+}
+
+.cf-container {
+    padding: 10px;
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+.my-picture {
+    border-radius: 50%;
+    width: 150px;
+}
+
+#info-space {
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    color: #FFF;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+}
+
+.btn {
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -ms-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+
+.btn-primary {
+    background: inherit;
+    color: #5C00A3;
+    border: 2px solid #5C00A3;
+}
+
+.btn-primary:hover {
+    background: #5C00A3;
+    color: #FFF;
+    border: 2px solid #5C00A3;
+}
