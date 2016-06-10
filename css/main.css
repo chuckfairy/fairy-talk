@@ -8,6 +8,9 @@ html, body {
     overflow: hidden;
 }
 
+a {
+    cursor: pointer;
+}
 
 .fullscreen {
     /*min-height: 100vh;*/
@@ -47,7 +50,7 @@ html, body {
     border: 2px solid #5C00A3;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .selected {
     background: #5C00A3;
     color: #FFF;
     border: 2px solid #5C00A3;
