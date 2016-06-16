@@ -6,7 +6,6 @@ html, body {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background: #000;
     margin: 0;
     padding: 0;
 }
@@ -37,6 +36,11 @@ h1, h2, h3, h4 {
 
 .topbar {
     padding: 5px;
+}
+
+.nav-dropdown > a {
+    display: block;
+    padding: 10px;
 }
 
 li .active {
@@ -72,11 +76,24 @@ li .active {
 
 #info-space {
     width: 100%;
-    /*min-height: 100vh;*/
+    min-height: 100vh;
     max-height: 100vh;
     color: #FFF;
     overflow-y: auto;
     /*position: absolute;*/
+    background: #000;
+    background: -moz-linear-gradient(left,
+        #101010 0%, #000 100%
+    );
+    background: -webkit-linear-gradient(left,
+        #101010 0%, #000 100%
+    );
+    background: -ms-linear-gradient(left,
+        #101010 0%, #000 100%
+    );
+    background: linear-gradient(left,
+        #101010 0%, #000 100%
+    );
     top: 0;
     left: 0;
 }
@@ -94,8 +111,15 @@ li .active {
     border: 2px solid #5C00A3;
 }
 
-.btn-primary:hover, .selected {
+.btn-primary:hover, .btn-primary:active, .selected {
     background: #5C00A3;
     color: #FFF;
     border: 2px solid #5C00A3;
+}
+
+.portfolioBlock {
+    padding: 20px 10px;
+    border-left: 6px solid #5C00A3;
+    background: #202020;
+    margin-bottom: 20px;
 }
