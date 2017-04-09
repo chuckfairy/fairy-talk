@@ -8,34 +8,96 @@ html, body {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    background: #1F1F1F;
 }
 
 a {
     cursor: pointer;
 }
 
-.fullscreen {
-    /*min-height: 100vh;*/
-}
-
 .relativer {
     position: relative;
-}
-
-.whiter {
-    background: #FFF;
-}
-
-.sidebar {
-    height: 100vh;
 }
 
 h1, h2, h3, h4 {
     margin-top: 0;
 }
 
+
+/** Sidebar **/
+
+.sidebar {
+    height: 100vh;
+    color: #AAA;
+    right: 10px;
+}
+
+.sidebar h1 {
+    padding-top: 10px;
+}
+
+#page-links {
+    padding-top: 1.5em;
+    position: relative;
+    left: -1.1em;
+}
+
+#page-links > a {
+    display: block;
+}
+
+#page-links > a .selected {
+    background: #000;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs > li {
+    width: 100%;
+    border: none !important;
+}
+
+.nav-tabs > li a {
+    padding: 10px 10px;
+    display: block !important;
+    border: none !important;
+    color: #AAA;
+    border-radius: 0;
+}
+
+.nav-tabs > li.active a {
+    background: #000 !important;
+}
+
+.dropdown-menu {
+    box-shadow: none;
+    padding: 0;
+    background: transparent;
+}
+
+.nav a:hover, .nav a:active, .nav-tabs a:hover, .nav a:focus,
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover
+{
+    padding-left: 15px;
+    color: #222;
+    background: #3FFA77 !important;
+    background-color: #3FFA77 !important;
+
+}
+
 .topbar {
+    color: #AAA;
     padding: 5px;
+}
+
+.nav-mobile {
+    background: #222;
+}
+
+.nav-mobile a {
+    color: #3FFA77;
 }
 
 .nav-dropdown > a {
@@ -55,7 +117,7 @@ li .active {
 }
 
 .hamburger {
-    padding: 10px;
+    padding-top: 5px;
 }
 
 .hamburger > a {
@@ -64,7 +126,7 @@ li .active {
 
 .cf-container {
     padding: 10px;
-    max-width: 50em;
+    max-width: 60em;
     max-height: 100%;
     margin: 0 auto;
 }
@@ -78,7 +140,7 @@ li .active {
     width: 100%;
     min-height: 100vh;
     max-height: 100vh;
-    color: #FFF;
+    color: #AAA;
     overflow-y: auto;
     /*position: absolute;*/
     background: #000;
@@ -98,7 +160,7 @@ li .active {
     left: 0;
 }
 
-.btn {
+.btn, .nav-tabs > li a {
     -webkit-transition: all .25s ease-in;
     -moz-transition: all .25s ease-in;
     -ms-transition: all .25s ease-in;
@@ -107,19 +169,19 @@ li .active {
 
 .btn-primary {
     background: inherit;
-    color: #5C00A3;
-    border: 2px solid #5C00A3;
+    color: #3FFA77;
+    border: 2px solid #3FFA77;
 }
 
 .btn-primary:hover, .btn-primary:active, .selected {
-    background: #5C00A3;
-    color: #FFF;
-    border: 2px solid #5C00A3;
+    background: #3FFA77;
+    color: #222;
+    border: 2px solid #3FFA77;
 }
 
 .portfolioBlock {
     padding: 20px 10px;
-    border-left: 6px solid #5C00A3;
+    border-left: 6px solid #3FFA77;
     background: #202020;
     margin-bottom: 20px;
 }
