@@ -19,6 +19,12 @@ a {
     position: relative;
 }
 
+h1, .courier {
+    font-family: Courier New, Courier, monospace !important;
+    font-weight: 500;
+	font-style: italic;
+}
+
 h1, h2, h3, h4 {
     margin-top: 0;
 }
@@ -28,7 +34,7 @@ h1, h2, h3, h4 {
 
 .sidebar {
     height: 100vh;
-    color: #AAA;
+    color: #CECECE;
     right: 10px;
 }
 
@@ -63,7 +69,7 @@ h1, h2, h3, h4 {
     padding: 10px 10px;
     display: block !important;
     border: none !important;
-    color: #AAA;
+    color: #CECECE;
     border-radius: 0;
 }
 
@@ -77,8 +83,10 @@ h1, h2, h3, h4 {
     background: transparent;
 }
 
+
 .nav a:hover, .nav a:active, .nav-tabs a:hover, .nav a:focus,
-.nav .open > a, .nav .open > a:focus, .nav .open > a:hover
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover,
+.dropdown-menu a:hover
 {
     padding-left: 15px;
     color: #222;
@@ -88,8 +96,13 @@ h1, h2, h3, h4 {
 }
 
 .topbar {
-    color: #AAA;
+    color: #CECECE;;
     padding: 5px;
+}
+
+.topbar h1 {
+    position: relative;
+    top: 5px;
 }
 
 .nav-mobile {
@@ -126,7 +139,7 @@ li .active {
 
 .cf-container {
     padding: 10px;
-    max-width: 60em;
+    max-width: 65em;
     max-height: 100%;
     margin: 0 auto;
 }
@@ -140,7 +153,7 @@ li .active {
     width: 100%;
     min-height: 100vh;
     max-height: 100vh;
-    color: #AAA;
+    color: #CECECE;
     overflow-y: auto;
     /*position: absolute;*/
     background: #000;
@@ -168,12 +181,14 @@ li .active {
 }
 
 .btn-primary {
-    background: inherit;
+    background: #000;
     color: #3FFA77;
     border: 2px solid #3FFA77;
 }
 
-.btn-primary:hover, .btn-primary:active, .selected {
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus,
+.selected
+{
     background: #3FFA77;
     color: #222;
     border: 2px solid #3FFA77;
