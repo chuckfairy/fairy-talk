@@ -1,3 +1,11 @@
+<?php
+
+$siteName = strpos($_SERVER['SERVER_NAME'], 'charlieabeling') === 0
+	? 'Charlie Abeling'
+	: 'Chuck Fairy';
+
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -14,7 +22,7 @@
 
         <link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main.css?site=20170">
 
     </head>
 
@@ -44,6 +52,7 @@
                                 <a href="#tab-info" data-toggle="tab"><i class="fa fa-info-circle"></i> Info</a>
                                 <a href="#tab-code" data-toggle="tab"><i class="fa fa-code"></i> Code</a>
                                 <a href="#tab-music" data-toggle="tab"><i class="fa fa-music"></i> Music</a>
+                                <a download="Chuckfairy_Resume_2017.pdf" href="assets/Resume_2017.pdf"><i class="fa fa-file-text-o"></i> Resume</a>
 
                             </ul>
 
@@ -51,7 +60,7 @@
 
                     </div>
 
-                    <h1>Chuck Fairy</h1>
+					<h1><?php echo $siteName; ?></h1>
 
                 </div>
 
@@ -373,7 +382,7 @@
 
                         <div class="text-center">
 
-                            <h1>Chuck Fairy</h1>
+							<h1><?php echo $siteName; ?></h1>
 
                             <p class="courier" style="font-size: 1.2em; padding-bottom: 10px;">Peace, Love, Technology</p>
 
