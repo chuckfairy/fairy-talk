@@ -4,6 +4,11 @@ $siteName = strpos($_SERVER['SERVER_NAME'], 'charlieabeling') === 0
 	? 'Charlie Abeling'
 	: 'Chuck Fairy';
 
+$then = "1994-01-23";
+$then_ts = strtotime($then);
+$then_year = date('Y', $then_ts);
+$age = date('Y') - $then_year;
+if(strtotime('+' . $age . ' years', $then_ts) > time()) $age--;
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +23,9 @@ $siteName = strpos($_SERVER['SERVER_NAME'], 'charlieabeling') === 0
 
         <title>Chuck Fairy : Charlie Abeling Software Engineer</title>
 
-        <link rel="stylesheet" href="plugin/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 
-        <link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 
         <link rel="stylesheet" href="css/main.css?site=20170">
 
@@ -52,7 +57,7 @@ $siteName = strpos($_SERVER['SERVER_NAME'], 'charlieabeling') === 0
                                 <a href="#tab-info" data-toggle="tab"><i class="fa fa-info-circle"></i> Info</a>
                                 <a href="#tab-code" data-toggle="tab"><i class="fa fa-code"></i> Code</a>
                                 <a href="#tab-music" data-toggle="tab"><i class="fa fa-music"></i> Music</a>
-                                <a download="Chuckfairy_Resume_2017.pdf" href="assets/Resume_2017.pdf"><i class="fa fa-file-text-o"></i> Resume</a>
+                                <a download="Charlieabeling_Resume_2020.pdf" href="assets/Charlieabeling_Resume_2020.pdf"><i class="fa fa-file-text-o"></i> Resume</a>
 
                             </ul>
 
@@ -80,7 +85,7 @@ $siteName = strpos($_SERVER['SERVER_NAME'], 'charlieabeling') === 0
 
                                 <br>
 
-                                <p>I am a 23 year old artist, designer, developer, composer, and overall pretty cool guy. The life I live is one of dedication and creation. I specialize in programming web development in the regions of backend as well as frontend and love to create web applications and sites. I am a constantly evolving man in a perpetually evolving world. Please click the links above or use the sidebar to view my work, thoughts, and code. Have a nice day!</p>
+								<p>I am a <?php echo $age; ?> year old artist, designer, developer, composer, and overall pretty cool guy. The life I live is one of dedication and creation. I specialize in programming web development in the regions of backend as well as frontend and love to create web applications and sites. I am a constantly evolving man in a perpetually evolving world. Please click the links above or use the sidebar to view my work, thoughts, and code. Have a nice day!</p>
 
                                 <h2>My Mission</h2>
 
@@ -189,6 +194,72 @@ $siteName = strpos($_SERVER['SERVER_NAME'], 'charlieabeling') === 0
 
                                             <a href="http://github.com/chuckfairy/Orzabal" class="btn btn-primary" target="_blank">
                                                 <i class="fa fa-github"></i> Github
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- OrzaSteel -->
+
+                                <div class="portfolioBlock">
+
+                                    <span>
+                                        <h2>OrzaSteel</h2>
+                                        <p>Pedal Steel Guitar Synth</p>
+                                    </span>
+
+                                    <div class="row">
+
+                                        <div class="col-md-5">
+
+                                            <img class="img-responsive" src="https://raw.githubusercontent.com/chuckfairy/OrzaSteel/master/screenshots/orzasteel_20200226.png">
+
+                                        </div>
+
+                                        <div class="col-md-7">
+
+											<p>OrzaSteel is a sound application to mimic playing a <a href="https://en.wikipedia.org/wiki/Pedal_steel_guitar" rel="nofollow">pedal steel guitar</a>. It uses my sound library <a href="https://github.com/chuckfairy/liborza">liborza</a> and currently supports <a href="https://jackaudio.org/" rel="nofollow">JACK</a> as an audio server.</p>
+
+                                            <a href="http://github.com/chuckfairy/OrzaSteel" class="btn btn-primary" target="_blank">
+                                                <i class="fa fa-github"></i> Github
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Orzabal -->
+
+                                <div class="portfolioBlock">
+
+                                    <span>
+                                        <h2>LibOrza</h2>
+                                        <p>C++ Audio Toolset</p>
+                                    </span>
+
+                                    <div class="row">
+
+                                        <div class="col-md-5">
+
+                                            <img class="img-responsive" src="assets/images/settings-of-orzasteel.png">
+
+                                        </div>
+
+                                        <div class="col-md-7">
+
+											<p>LibOrza is a set of tools for creating audio applications. It currently supports JACK as it's audio server, and LV2 plugins for integrating as effects. It's patchbay will help you connect effects in sequence and . Use <a href="https://chuckfairy.com/chuckfairy/liborza-qt">liborza-qt</a> for a set of uis for managing those patchbays.</p>
+
+                                            <a href="http://github.com/chuckfairy/liborza" class="btn btn-primary" target="_blank">
+                                                <i class="fa fa-github"></i> Github
+                                            </a>
+
+                                            <a href="http://github.com/chuckfairy/liborza-qt" class="btn btn-primary" target="_blank">
+                                                <i class="fa fa-github"></i> Github QT
                                             </a>
 
                                         </div>
@@ -422,9 +493,9 @@ $siteName = strpos($_SERVER['SERVER_NAME'], 'charlieabeling') === 0
 
                                         <ul class="dropdown-menu">
 
-                                            <li><a download="Chuckfairy_Resume_2017.pdf" href="assets/Resume_2017.pdf">PDF</a></li>
-                                            <li><a download="Chuckfairy_Resume_2017.docx" href="assets/Resume_2017.docx">DOC</a></li>
-                                            <li><a download="Chuckfairy_Resume_2017.odt" href="assets/Resume_2017.odt">ODT</a></li>
+                                            <li><a download="Charlieabeling_Resume_2020.pdf" href="assets/Charlieabeling_Resume_2020.pdf">PDF</a></li>
+                                            <li><a download="Charlieabeling_Resume_2020.docx" href="assets/Charlieabeling_Resume_2020.docx">DOC</a></li>
+                                            <li><a download="Charlieabeling_Resume_2020.odt" href="assets/Charlieabeling_Resume_2020.odt">ODT</a></li>
 
                                         </ul>
 
@@ -446,9 +517,10 @@ $siteName = strpos($_SERVER['SERVER_NAME'], 'charlieabeling') === 0
 
         <!--JS LIBS-->
 
-        <script src="plugin/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
 
-        <script src="plugin/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
 
         <script src="js/Main.js"></script>
 

@@ -17,7 +17,8 @@
         "tests"
     ],
     "dependencies": {
-        "bootstrap": "*",
-        "font-awesome": "*"
+        "bootstrap": "^3",
+        "font-awesome": "*",
+        "jquery": "^3.4.1"
     }
 }
